@@ -13,22 +13,34 @@
 ## Header <a name="header"></a>
 
 # Header1
-> `# Header1`
+    # Header1
 
 ### Header3
-> `### Header3`
+    ### Header3
 
 ###### Header6
-> `###### Header6`
+    ###### Header6
 
 ## Link <a name="header"></a>
 
 ### Normal Link
 [text link](http://example.com "Optional Tilte")
-> `[text link](http://example.com "Optional  Tilte")`
+
+    [text link](http://example.com "Optional  Tilte")
 
 ![image](http://daringfireball.net/favicon.ico "Optional Title")
-> `![image](http://daringfireball.net/favicon.ico "Optional Title")`
+
+    ![image](http://daringfireball.net/favicon.ico "Optional Title")
+
+### Automatic Link
+<http://example.com>
+
+user.name@example.com
+
+    <http://example.com>
+    user.name@example.com
+
+> Valid URL can also be automatic link in [github-flavored-markdown][gfm]
 
 ### Reference-style Link
 I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3].
@@ -37,41 +49,45 @@ I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3]
 [2]: http://search.yahoo.com/  "Yahoo Search"
 [3]: http://search.msn.com/    "MSN Search"
 
-> I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3].
-\[1\]: http://google.com/        "Google"
-\[2\]: http://search.yahoo.com/  "Yahoo Search"
-\[3\]: http://search.msn.com/    "MSN Search"
+    I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3].
+    [1]: http://google.com/        "Google"
+    [2]: http://search.yahoo.com/  "Yahoo Search"
+    [3]: http://search.msn.com/    "MSN Search"
 
 ## List <a name="list"></a>
-
 * item0
 * item1
 * item2
 
-`*` or `-` or `+` as leading char.
+        * item0
+        * item1
+        * item2
 
-> `* item0
-* item1
-* item2`
+> `*` or `-` or `+` are valid leading char.
+> 8 spaces or two tabs needed when code after list
 
 1. item0
 2. item1
 3. item2
 
-> `1. item0
-   2. item1
-   3. item2`
+        1. item0
+        2. item1
+        3. item2
+
 
 ## Font <a name="font"></a>
 
 *Italic*
-> `*Italic*`
+
+    *Italic*
 
 **Bold**
-> `**Bold**`
+
+    **Bold**
 
 ***Bold & Italic***
-> `***Bold & Italic***`
+
+    ***Bold & Italic***
 
 ## Blockquote <a name="blockquote"></a>
 
@@ -79,8 +95,9 @@ I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3]
 > > This is nested blockquote.
 
 Single line or multi lines.
-> `> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.`
-> `> > This is nested blockquote.`
+
+    > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+    > > This is nested blockquote.
 
 ## Code <a name="code"></a>
 
@@ -88,8 +105,9 @@ Single line or multi lines.
 
     js code
 
-4 leading whitespace.
-> &nbsp;&nbsp;&nbsp;&nbsp;`js ocde`
+> 4 leading whitespace.
+
+        js code
 
 ### Code highlight
 
@@ -98,35 +116,35 @@ var hi = 'hi';
 console.log(hi);
 ```
 
-Supported in [github-flavored-markdown](https://github.com/mojombo/github-flavored-markdown)
+Supported in [github-flavored-markdown][gfm]
 
-> \`\`\`javascript
-var hi = 'hi';
-console.log(hi);
-\`\`\`
+    ``\`javascript
+    var hi = 'hi';
+    console.log(hi);
+    ```
 
 ## Horizontal Rule <a name="horizontal"></a>
 
 * * *
 
-`*` or `-` is ok.
-
-> `* * *`
+    * * *
 
 ***
 
-> `***`
+    ***
 
 *****
 
-> `*****`
+    *****
+
+> `*` or `-` is ok.
 
 
 ## Escape <a name="escape"></a>
 
-- \`   backtick
-- \*   asterisk
-- \#   hash mark
-- [More..](http://daringfireball.net/projects/markdown/syntax#backslash)
+* \`   backtick
+* \*   asterisk
+* \#   hash mark
+* [More..](http://daringfireball.net/projects/markdown/syntax#backslash)
 
-
+[gfm]: https://github.com/mojombo/github-flavored-markdown "github-flavored-markdown"

@@ -1,16 +1,31 @@
-var md2html = require('../lib').md2html;
+var markdownTemplate = require('../lib');
 
-md2html({
+var callback = function (html, filepath) {
+  console.log('output file:');
+  console.log('[path]', filepath);
+  console.log('[length]', html.length);
+  console.log('[html]\n', html.substr(0, 200) + '..');
+};
+
+// Use github template
+var githubTpl = markdownTemplate({
+  tplStyle:'github'
+});
+githubTpl({
   srcPath:__dirname + '/hello.md',
-  destPath:__dirname + '/hello.html',
-  lib:'github-flavored-markdown',
-//  lib:'markdown',
-//  lib:'node-markdown',
-  callback:function (html, filepath) {
-    console.log('output file:');
-    console.log('[path]', filepath);
-    console.log('[length]', html.length);
-    console.log('[html]\n', html.substr(0, 200) + '..');
-  }
+  destPath:__dirname + '/tmp/hello-github.html',
+  title:"Markdown Cheat Sheet",
+  callback:callback
+});
 
+// Use markdownpad template (Custom File)
+var markdownpadTpl = markdownTemplate({
+  tplCustomFilePath:__dirname + '/../lib/tpl/tpl-markdownpad.html',
+  tplCustomToken:'{{MARKDOWN}}',
+  tplCustomEncoding:'utf-8'
+});
+markdownpadTpl({
+  srcPath:__dirname + '/hello.md',
+  destPath:__dirname + '/tmp/hello-markdownpad.html',
+  callback:callback
 });

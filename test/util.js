@@ -4,7 +4,7 @@ QUnit.module('markdown-util');
 
 test("import", function () {
   ok(require('../lib'), "index.js");
-  ok(require('../lib/util.js'), "util.js");
+  ok(require('../lib/util.js'), "githubTpl.js");
 });
 
 var util = require('../lib');
