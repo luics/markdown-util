@@ -1,9 +1,6 @@
-# connect-header
+# markdown-util
 
-This middleware sets or removes header on HTTP responses.
-
-http://en.wikipedia.org/wiki/List_of_Markdown_implementations
-https://github.com/chjj/marked
+Entire html file generator for markdown file.
 
 ## Installation
 
@@ -11,15 +8,17 @@ https://github.com/chjj/marked
 
 ## Usage
 
-like.
+	var markdownTemplate = require('markdown-util');
 
-    var util = require('markdown-util');
+    var githubTpl = markdownTemplate({
+	  tplStyle:'github'
+	});
 
-    util.md2html({
-
-    });
-
-
+	githubTpl({
+	  srcPath:__dirname + '/hello.md',
+	  destPath:__dirname + '/tmp/hello-github.html',
+	  title:"Markdown Cheat Sheet"
+	});
 
 ## Credits
 
