@@ -1,0 +1,39 @@
+{
+  "name":"markdown-util",
+  "version":"0.0.1",
+  "description":"Entire html file generator for markdown file.",
+  "author":{
+    "name":"Luics",
+    "email":"luics.king@gmail.com",
+    "url":"http://github.com/luics"
+  },
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/luics/markdown-util.git"
+  },
+  "bugs":{
+    "url":"http://github.com/luics/markdown-util/issues"
+  },
+  "main":"./lib",
+  "dependencies":{
+    "github-flavored-markdown":"1.0.1"
+  },
+  "devDependencies":{
+    "qunit":"0.5.2",
+    "markdown":"0.4.0",
+    "node-markdown":"0.1.1"
+  },
+  "scripts":{
+    "test":"node test"
+  },
+  "engines":{
+    "node":">= 0.4.0"
+  },
+  "licenses":[
+    {
+      "type":"MIT",
+      "url":"http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "keywords":["markdown", "text processing", "util", "html"]
+}
