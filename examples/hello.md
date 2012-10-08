@@ -77,17 +77,15 @@ I get 10 times more traffic from [Google] [1] than from [Yahoo] [2] or [MSN] [3]
 
 ## Font <a name="font"></a>
 
-*Italic*
+*Emphasis/Italic*
 
-    *Italic*
+    *Emphasis/Italic*
 
-**Bold**
+**Strong/Bold**
 
-    **Bold**
+    **Strong/Bold**
 
-***Bold & Italic***
-
-    ***Bold & Italic***
+> `*` or `_` is ok.
 
 ## Blockquote <a name="blockquote"></a>
 
@@ -118,7 +116,7 @@ console.log(hi);
 
 Supported in [github-flavored-markdown][gfm]
 
-    ``\`javascript
+    ```javascript
     var hi = 'hi';
     console.log(hi);
     ```

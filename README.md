@@ -28,7 +28,7 @@ Entire html file generator for markdown file.
 ## Test
 
     $ npm install
-    $ node test
+    $ npm test
 
 
 ## License

@@ -22,10 +22,14 @@ githubTpl({
 var markdownpadTpl = markdownTemplate({
   tplCustomFilePath:__dirname + '/../lib/tpl/tpl-markdownpad.html',
   tplCustomToken:'{{MARKDOWN}}',
+  tplTitleToken:'{{TITLE}}',
+  tplCssToken:'{{CSS}}',
   tplCustomEncoding:'utf-8'
 });
 markdownpadTpl({
   srcPath:__dirname + '/hello.md',
   destPath:__dirname + '/tmp/hello-markdownpad.html',
-  callback:callback
+  callback:callback,
+  title: "Custom Markdown Template",
+  css: "body{padding:0 10px;}"
 });
