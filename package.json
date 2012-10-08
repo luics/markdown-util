@@ -1,6 +1,6 @@
 {
   "name":"markdown-util",
-  "version":"0.0.1",
+  "version":"0.0.2",
   "description":"Entire html file generator for markdown file.",
   "author":{
     "name":"Luics",
